@@ -1,0 +1,10 @@
+
+.items{
+    width:350px;
+}
+
+.items img{
+    width: 100%;
+  
+    object-fit: contain;
+}

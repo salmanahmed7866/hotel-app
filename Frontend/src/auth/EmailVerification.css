@@ -1,0 +1,51 @@
+.email-verification-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 600px;
+    height: 20vh;
+    background-color: rgb(228, 227, 227);
+    text-align: center;
+    border-radius: 12px;
+    padding: 20px 0;
+    margin: 0 auto;
+
+}
+
+.email-verification-container input {
+    width: 300px;
+    height: 30px;
+}
+
+.input-button-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.verify-button {
+    background-color: rgb(39, 101, 236);
+    color: white
+}
+
+.blur {
+    filter: blur(4px);
+    pointer-events: none;
+}
+
+.overlay {
+    width: 60px;
+    height: 60px;
+    animation: spin 0.8s linear infinite;
+    border: 3px solid #ccc;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    margin: auto;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}

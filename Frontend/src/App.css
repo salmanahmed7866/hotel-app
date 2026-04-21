@@ -1,0 +1,15 @@
+.navbar{
+  display: flex;
+justify-content: end;
+align-items: start;
+}
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    text-Decoration: none;
+    color: #626262;
+}

@@ -1,0 +1,50 @@
+.signup {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.signup-heading{
+  font-size: 24px;
+}
+
+.signup-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+    width: 22%;
+
+}
+
+.signup-form form {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.signup-form input{
+    padding: 15px;
+    border-radius: 5px;
+border:1px solid black
+
+}
+.signup-btn{
+margin-top: 20px;
+background-color: rgb(72, 118, 225);
+color: white;
+}
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #ccc;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: auto;
+}
+
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,21 @@
+.popular{
+    display: flex;
+    margin-top: 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.popular h1{
+padding: 20px 0;
+}
+
+.popular-items {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.popular-items :hover{
+    transform: scale(1.05);
+    transition: 0.6s;
+}
