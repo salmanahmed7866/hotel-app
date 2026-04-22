@@ -13,7 +13,8 @@ const ShopContextProvider = (props) => {
     const fetchData = async () => {
 
         try {
-            const url = "http://localhost:3000/image/getProduct"
+           const url = "http://localhost:3000/image/getProduct"
+            //   const url =` ${import.meta.env.BACKEND_URL}/image/getProduct`
             const response = await fetch(url, { method: "GET", headers: { "Content-Type": "application/json" } })
             if (!response.ok) {
                 throw new Error("Failed to fetch");
