@@ -14,7 +14,7 @@ const ProductDisplay = (props) => {
     const sizes = ["S", "M", "L", "XL", "XXL"];
     const [selectedSize, setSelectedSize] = useState(sizes[0]);
     const addToCart = async (userId, productId, quantity) => {
-        const url= "http://localhost:3000/cart"
+        const url= `${import.meta.env.VITE_BACKEND_URL}/cart`
         try {
             const response = await fetch(url, {
                 method: "POST",

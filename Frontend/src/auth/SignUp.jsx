@@ -18,7 +18,7 @@ const SignUp = () => {
     }
 
     const signUp = async () => {
-        const url = "http://localhost:3000/user/signup"
+        const url = `${import.meta.env.VITE_BACKEND_URL}/user/signup"
 
         try {
             setLoading(true);

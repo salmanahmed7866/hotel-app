@@ -10,7 +10,7 @@ const CartContextProvider = ({ children }) => {
     const userId = "65f1c8a9b4b92f1b2e6c1235"; // temp
     const refreshCartCount = async () => {
         try {
-            const url = `http://localhost:3000/cart/${userId}`
+            const url = `${import.meta.env.VITE_BACKEND_URL}/cart/${userId}`
             const response = await fetch(url, {
                 method: "get",
                 headers: { "Content-Type": "application/json" }

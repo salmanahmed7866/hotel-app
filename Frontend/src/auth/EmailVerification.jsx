@@ -10,7 +10,7 @@ const EmailVerification = () => {
     const navigate = useNavigate();
     const verifyemail = async () => {
         setLoading(true)
-        const url = "http://localhost:3000/user/verifyEmail"
+        const url = `${import.meta.env.VITE_BACKEND_URL}/user/verifyEmail`
         const response = await fetch(url, { method: "post", body: JSON.stringify({ code }), headers: { "content-type": "application/json" } })
         if (response.ok) {
             setTimeout(() => { setLoading(false)

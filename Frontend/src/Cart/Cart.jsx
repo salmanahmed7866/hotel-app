@@ -27,7 +27,7 @@ const Cart = (props) => {
     }, [datas])
     const completeOrder = async () => {
         try {
-            const url = "http://localhost:3000/checkout";
+            const url = `${import.meta.env.VITE_BACKEND_URL}/checkout`;
             const response = await fetch(url, {
                 method: "post", body: JSON.stringify(input), headers: {
                     "Content-Type": "application/json",

@@ -13,10 +13,10 @@ const ShopContextProvider = (props) => {
     const fetchData = async () => {
 
         try {
-            const testurl=import.meta.env.VITE_BACKEND_URL;
-           //const url = "http://localhost:3000/image/getProduct"
-           console.log("Test URL" ,testurl);
-             const url =`${import.meta.env.VITE_BACKEND_URL}/image/getProduct`
+            const testurl = import.meta.env.VITE_BACKEND_URL;
+            //const url = "http://localhost:3000/image/getProduct"
+            console.log("Test URL", testurl);
+            const url = `${import.meta.env.VITE_BACKEND_URL}/image/getProduct`
             const response = await fetch(url, { method: "GET", headers: { "Content-Type": "application/json" } })
             if (!response.ok) {
                 throw new Error("Failed to fetch");
