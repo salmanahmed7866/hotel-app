@@ -1,0 +1,156 @@
+.add-product {
+    width: 80%;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 200px;
+
+}
+
+.product-item-heading {
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(78, 77, 77);
+}
+
+.add-item-button {
+    padding: 12px 30px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(28, 120, 249);
+    border: none;
+}
+
+.product-table-items {
+    text-align: center;
+    padding: 50px 30px;
+    width: 80%;
+}
+
+.product-table-items th {
+    text-align: left;
+    padding: 12px 50px;
+    font-size: 18px;
+}
+
+.product-table-items img {
+    width: 60px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box {
+    width: 50%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-box input {
+    padding: 10px;
+}
+
+.modal-buttons {
+    display: flex;
+
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.modal-buttons button {
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: rgb(46, 98, 220);
+}
+
+.img-upload-container {
+    margin-top: 20px;
+}
+
+.img-upload-container input {
+    display: none;
+}
+
+.preview-img {
+    width: 100px;
+    height: 100px;
+
+
+}
+
+.preview-img img {
+    width: 100%;
+    height: 100%;
+  
+
+    object-fit: cover;
+}
+
+.custome-file-upload {
+
+    padding: 10px 20px;
+    background-color: aqua;
+    background: rgb(71, 71, 243);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.input-row {
+    display: flex;
+    gap: 20px;
+}
+
+.input-row input {
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(237, 236, 236)
+}
+
+.check-status {
+    width: 30%;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(237, 236, 236)
+}
+ .delete-icon svg {
+    border: none;
+   font-size: 22px;
+    background: none
+ }
+
+.circular-progress{
+    height: 60px;
+    width: 60px;
+    color:black ;
+    border-radius: 50%;
+    border:3px solid black;
+    border-top: 3px solid orange;
+   animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin{
+    100%{transform: rotate(360deg);
+    }
+}
+

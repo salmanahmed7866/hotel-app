@@ -23,12 +23,13 @@ const upload = multer({ storage: storage, limits: { fileSize: 5 * 1024 * 1024 } 
 
 routes.post("/uploads", upload.single("file"), async (req, res) => {
     try {
+        const imageUrls = req.file.path
         const data = req.body;
         console.log(data);
-        const productData = new Product({ name: req.body.name, image: req.file.path, new_price: req.body.new_price, old_price: req.body.old_price })
+        const productData = new Product({ name: req.body.name, image: imageUrls, status: req.body.status, new_price: req.body.new_price, old_price: req.body.old_price })
         const response = await productData.save();
         //  res.send("File Uploaded Successfully")
-        res.status(200).json({ reponse: response })
+        res.status(200).json({ response: response })
     }
     catch (e) {
         console.log("Error", e)
@@ -38,10 +39,28 @@ routes.post("/uploads", upload.single("file"), async (req, res) => {
 routes.get("/getProduct", async (req, res) => {
     try {
         const response = await Product.find()
-        res.status(200).json({ reponse: response });
+        res.status(200).json({ response: response });
     } catch (e) {
         console.log(e)
     }
 
+})
+
+routes.post("/removeProduct/:productId", async (req, res) => {
+    try {
+        const response = await Product.deleteOne({_id: req.params.productId })
+         res.status(200).json({ response: response });
+        if (res.status(200)) {
+            console.log("succeffuly deleted")
+        }
+        else {
+            console.log("Error")
+
+        }
+
+    }
+    catch (e) {
+        console.log(e)
+    }
 })
 module.exports = routes

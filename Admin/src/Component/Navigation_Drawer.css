@@ -1,0 +1,28 @@
+.left-menubar {
+  width: 12%;
+}
+
+.menubar-items {
+  margin-top: 50px;
+  margin-left: 20px;
+  overflow-y: auto;
+  border-right: 1px solid black;
+  font-size: 17px;
+  color: rgb(101, 13, 189);
+  gap: 30px
+}
+
+.logo {
+  font-size: 30px;
+}
+
+.drawer {
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+a {
+  text-decoration: none
+}
