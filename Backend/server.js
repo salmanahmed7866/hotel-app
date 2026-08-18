@@ -8,13 +8,21 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const db = require("./db")
 const cors = require("cors")
-app.use(cors())
+
 const data = require("./assets/data");
 const { default: mongoose } = require("mongoose");
 const Product = require("./model/product");
 const Cart = require("./model/cart")
 require("dotenv").config()
 const userRoutes = require("./routes/user_routes")
+
+app.use(cors({
+    origin: "https://ecommerce-app-taupe-rho.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true
+}));
+
 
 app.use("/user", userRoutes);
 app.use("/image", uploadFileRoutes);
@@ -86,5 +94,11 @@ app.get("/", (req, res) => {
     res.send("Get Method is Working")
     console.log("get method is calling")
 })
+if (require.main === module) {
+    app.listen(3000, () => {
+        console.log("Server running on port 3000");
+    });
+}
 
-app.listen(3000, () => { console.log("App is Running on 3000") })
+module.exports = app;
+// app.listen(3000, () => { console.log("App is Running on 3000") })
