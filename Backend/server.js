@@ -8,7 +8,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const db = require("./db")
 const cors = require("cors")
-
+const Product = require("../model/product.js");
+const { generateToken, jwtAuthMiddleware } = require("./jwt.js")
 const data = require("./assets/data");
 const { default: mongoose } = require("mongoose");
 const Product = require("./model/product");
@@ -18,8 +19,6 @@ const userRoutes = require("./routes/user_routes")
 
 app.use(cors({
     origin: "https://ecommerce-app-taupe-rho.vercel.app",
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
 }));
 
@@ -40,7 +39,15 @@ app.post("/checkout", async (req, res) => {
     }
 
 })
+app.get("/getProduct", jwtAuthMiddleware, async (req, res) => {
+    try {
+        const response = await Product.find()
+        res.status(200).json({ reponse: response });
+    } catch (e) {
+        console.log(e)
+    }
 
+})
 app.post("/cart", async (req, res) => {
     try {
         const { userId, productId, quantity } = req.body;
