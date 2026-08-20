@@ -20,7 +20,7 @@ const Navbar = () => {
                 </ul>
                 <div className='nav-login-cart'>
                    <Link to="/signup"><h1>Login </h1></Link> 
-                    <Link to="/cart"><img className='cart-icon' src={cart_icon} alt=""></img><span className="cart-badge">{cartCount}</span></Link>
+                   {/* <Link to="/cart"><img className='cart-icon' src={cart_icon} alt=""></img><span className="cart-badge">{cartCount}</span></Link> */}
                 </div>
 
             </div>
