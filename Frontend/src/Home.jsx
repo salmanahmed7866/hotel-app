@@ -16,7 +16,7 @@ return (
     <>
         <div className='popular'>
             <h1>Popular</h1>
-            <div className='popular-items'>{productData.map((items, i) => {
+            <div className='popular-items'>{productData?.map((items, i) => {
                 return <Items key={i} id={items._id} name={items.name} image={items.image} old_price={items.old_price} new_price={items.new_price} />
             })}</div>
         </div>
