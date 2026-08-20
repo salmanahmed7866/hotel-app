@@ -18,8 +18,8 @@ require("dotenv").config()
 const userRoutes = require("./routes/user_routes")
 
 app.use(cors({
-    // origin: "https://ecommerce-app-taupe-rho.vercel.app",
-    // credentials: true
+    origin: "https://ecommerce-app-taupe-rho.vercel.app",
+    credentials: true
 }));
 
 
