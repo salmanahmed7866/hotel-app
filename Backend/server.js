@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const db = require("./db")
 const cors = require("cors")
-const Product = require("../model/product.js");
+// const Product = require("../model/product.js");
 const { generateToken, jwtAuthMiddleware } = require("./jwt.js")
 const data = require("./assets/data");
 const { default: mongoose } = require("mongoose");
@@ -101,6 +101,5 @@ app.get("/", (req, res) => {
     res.send("Get Method is Working and heoolo")
     console.log("get method is calling and heoolo")
 })
-
-module.exports = app;
-// app.listen(3000, () => { console.log("App is Running on 3000") })
+app.listen(3000, () => { console.log("App is Running on 3000") })
+module.exports = app; 
