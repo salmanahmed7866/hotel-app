@@ -6,6 +6,7 @@ const uploadFileRoutes = require("./upload_file")
 app.use(bodyParser.json())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 const db = require("./db")
 const cors = require("cors")
 // const Product = require("../model/product.js");
@@ -17,8 +18,11 @@ const Cart = require("./model/cart")
 require("dotenv").config()
 const userRoutes = require("./routes/user_routes")
 
+
 app.use(cors({
     origin: "https://ecommerce-app-taupe-rho.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
 }));
 
@@ -101,5 +105,5 @@ app.get("/", (req, res) => {
     res.send("Get Method is Working and heoolo")
     console.log("get method is calling and heoolo")
 })
-app.listen(3000, () => { console.log("App is Running on 3000") })
+// app.listen(3000, () => { console.log("App is Running on 3000") })
 module.exports = app; 
