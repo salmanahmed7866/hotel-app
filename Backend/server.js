@@ -99,7 +99,7 @@ app.post("/products", async (req, res) => {
 })
 app.get("/", (req, res) => {
     res.send("Get Method is Working")
-    console.log("get method is calling")
+    console.log("get method is calling and heoolo")
 })
 if (require.main === module) {
     app.listen(3000, () => {
