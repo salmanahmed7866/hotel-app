@@ -18,8 +18,8 @@ require("dotenv").config()
 const userRoutes = require("./routes/user_routes")
 
 app.use(cors({
-    origin: "https://ecommerce-app-taupe-rho.vercel.app",
-    credentials: true
+    // origin: "https://ecommerce-app-taupe-rho.vercel.app",
+    // credentials: true
 }));
 
 
@@ -101,11 +101,6 @@ app.get("/", (req, res) => {
     res.send("Get Method is Working and heoolo")
     console.log("get method is calling and heoolo")
 })
-if (require.main === module) {
-    app.listen(3000, () => {
-        console.log("Server running on port 3000");
-    });
-}
 
 module.exports = app;
 // app.listen(3000, () => { console.log("App is Running on 3000") })
